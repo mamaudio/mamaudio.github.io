@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Artikel Full JS</title>
-  
-  <!--<link rel="stylesheet" href="https://mamaudio.id/assets/css/bootstrap.min.css">-->
-
+  <title>Artikel MAM Audio</title>
+	
   <style>
     *{margin:0;padding=0;}
   	iframe{height:100vh; width:100vw;}
   </style>
 </head>
 <body>
-	<div id="show"></div>
+  <div id="show"></div>
 
-    <script src="https://almuhsinin.my.id/public/js/jquery-3.5.1.min.js"></script>
-
-	<script>
-		function getUrlVars(param=null)
-		{
+  <script src="https://almuhsinin.my.id/public/js/jquery-3.5.1.min.js"></script>
+  <script>
+    function getUrlVars(param=null)
+    {
 			if(param !== null)
 			{
 				var vars = [], hash;
@@ -37,11 +34,11 @@
 			{
 				return null;
 			}
-		}
+    }
 
-		var idArticle = getUrlVars("open");
+    var idArticle = getUrlVars("open");
 
-		$.ajax({
+    $.ajax({
 			url : 'https://mamaudio.id/open.php',
 			method : 'post',
 			data : {
@@ -53,7 +50,7 @@
 			success : function(load){
         $('#show').html(load);
       }
-		});
-	</script>
+    });
+  </script>
 </body>
 </html>
